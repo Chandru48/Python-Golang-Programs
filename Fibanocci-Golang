@@ -1,0 +1,19 @@
+package main
+import "fmt"
+
+func main() {
+    fmt.Println("Enter the number :")
+    var num,Next_nums int
+    fmt.Scanln(&num)
+    First_num :=0
+    Second_num:=1
+    fmt.Println("Fibanocci number is",First_num)
+    fmt.Println(Second_num)
+    for i :=2;i<num;i++{
+        Next_nums=First_num+Second_num
+        First_num=Second_num
+        Second_num=Next_nums
+        fmt.Println(Next_nums)
+        
+    }
+}
