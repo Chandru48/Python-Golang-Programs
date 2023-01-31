@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+var temp int
+func main() {
+  fmt.Println("Enter Total Numbers: ")
+  var Total int
+  fmt.Scanln(&Total)
+  var a = make([]int, Total)
+  for i:=0; i<Total; i++ {
+      fmt.Printf("Enter %dth element: ", i)
+      fmt.Scanf("%d", &a[i])
+  }
+  fmt.Println("array is: ",a)
+  for i:=0;i<Total;i++{
+    for j:=i+1;j<Total;j++{
+      if a[i]<a[j]{
+        temp=a[i]
+        a[i]=a[j]
+        a[j]=temp 
+      }
+    }
+  }    
+  fmt.Println("Second Largest array : ",a[1])
+}
