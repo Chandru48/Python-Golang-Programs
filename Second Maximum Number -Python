@@ -1,0 +1,13 @@
+array=[]
+total_num=int(input("Enter total Numbers :"))
+for i in range(0,total_num):
+    numbers=int(input("Enter the Numbers: "))
+    array.append(numbers)
+print(array)
+for i in range(0,len(array)):
+    for j in range(i+1,len(array)):
+        
+        if array[i]>array[j]:
+            array[i],array[j]=array[j],array[i]
+print("Second largest Number is",array[-2])
+
