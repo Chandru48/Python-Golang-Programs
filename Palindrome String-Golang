@@ -1,0 +1,20 @@
+package main
+import( 
+    "fmt"
+    )
+func main() {
+    fmt.Println("enter the string: ")
+    var word string
+    fmt.Scanln(&word)
+    rev :=""
+    for i :=0;i<=len(word)-1;i++{
+        rev =string(word[i])+rev
+        println(rev)
+    }
+    if word==rev{
+        fmt.Println(word,"is palindrome")
+    }else{
+        fmt.Println(word,"is not palindrome")
+    }
+
+}
